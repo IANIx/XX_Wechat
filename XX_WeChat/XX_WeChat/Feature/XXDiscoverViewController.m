@@ -7,23 +7,62 @@
 //
 
 #import "XXDiscoverViewController.h"
+#import "XXTableViewCell.h"
+@interface XXDiscoverViewController ()<UITableViewDelegate,UITableViewDataSource>
 
-@interface XXDiscoverViewController ()
-
+@property (nonatomic, strong) UITableView *tableView;
+@property(nonatomic, copy) NSArray *dataArray;
 @end
 
 @implementation XXDiscoverViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"Plist_Discover" ofType:@"plist"];
+    if (plistPath) {
+        self.dataArray = [[NSArray alloc]initWithContentsOfFile:plistPath];
+    }
+    [self setupSubViews];
     // Do any additional setup after loading the view.
 }
 
+- (void)setupSubViews {
+    [self.view addSubview:self.tableView];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.right.bottom.mas_equalTo(self.view);
+    }];
+}
+#pragma mark - tableView
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.dataArray[section] count];
+}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.dataArray.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    XXTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (!cell) {
+        cell = [[XXTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
+    [cell settingData:self.dataArray[indexPath.section][indexPath.row]];
+    return cell;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 0.0000001;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+- (UITableView *)tableView {
+    if (_tableView == nil) {
+        _tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+    }
+    return _tableView;
+}
 /*
 #pragma mark - Navigation
 

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		822785A81EC46E8B003A64E8 /* XXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 822785A71EC46E8B003A64E8 /* XXNavigationController.m */; };
 		822785AB1EC46F1D003A64E8 /* XXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 822785AA1EC46F1D003A64E8 /* XXViewController.m */; };
+		823FB8C91EC94F2500984BCD /* XXTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 823FB8C81EC94F2500984BCD /* XXTableViewCell.m */; };
+		823FB8CC1EC9535A00984BCD /* Plist_Discover.plist in Resources */ = {isa = PBXBuildFile; fileRef = 823FB8CB1EC9535A00984BCD /* Plist_Discover.plist */; };
 		825D4E1C1EC54321000C4028 /* XXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825D4E1B1EC54321000C4028 /* XXTabBarController.m */; };
 		825D4E1F1EC543C5000C4028 /* AppDelegate+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = 825D4E1E1EC543C5000C4028 /* AppDelegate+Router.m */; };
 		825D4E221EC543FE000C4028 /* XXRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 825D4E211EC543FE000C4028 /* XXRouter.m */; };
@@ -31,6 +33,9 @@
 		822785A71EC46E8B003A64E8 /* XXNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXNavigationController.m; sourceTree = "<group>"; };
 		822785A91EC46F1D003A64E8 /* XXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXViewController.h; sourceTree = "<group>"; };
 		822785AA1EC46F1D003A64E8 /* XXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXViewController.m; sourceTree = "<group>"; };
+		823FB8C71EC94F2500984BCD /* XXTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXTableViewCell.h; sourceTree = "<group>"; };
+		823FB8C81EC94F2500984BCD /* XXTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXTableViewCell.m; sourceTree = "<group>"; };
+		823FB8CB1EC9535A00984BCD /* Plist_Discover.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Plist_Discover.plist; sourceTree = "<group>"; };
 		825D4E1A1EC54321000C4028 /* XXTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXTabBarController.h; sourceTree = "<group>"; };
 		825D4E1B1EC54321000C4028 /* XXTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXTabBarController.m; sourceTree = "<group>"; };
 		825D4E1D1EC543C5000C4028 /* AppDelegate+Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Router.h"; sourceTree = "<group>"; };
@@ -82,6 +87,7 @@
 		8227859D1EC45756003A64E8 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				823FB8C61EC94EA000984BCD /* discover(发现) */,
 				825D4E231EC5447C000C4028 /* Main */,
 			);
 			path = Feature;
@@ -99,6 +105,7 @@
 		8227859F1EC45EAF003A64E8 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				823FB8CA1EC951F700984BCD /* Plist */,
 				822785A51EC46E41003A64E8 /* Root */,
 				822785A21EC45ED4003A64E8 /* Categories */,
 				822785A11EC45ECB003A64E8 /* Widget */,
@@ -138,8 +145,25 @@
 				822785AA1EC46F1D003A64E8 /* XXViewController.m */,
 				825D4E1A1EC54321000C4028 /* XXTabBarController.h */,
 				825D4E1B1EC54321000C4028 /* XXTabBarController.m */,
+				823FB8C71EC94F2500984BCD /* XXTableViewCell.h */,
+				823FB8C81EC94F2500984BCD /* XXTableViewCell.m */,
 			);
 			name = Root;
+			sourceTree = "<group>";
+		};
+		823FB8C61EC94EA000984BCD /* discover(发现) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "discover(发现)";
+			sourceTree = "<group>";
+		};
+		823FB8CA1EC951F700984BCD /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				823FB8CB1EC9535A00984BCD /* Plist_Discover.plist */,
+			);
+			name = Plist;
 			sourceTree = "<group>";
 		};
 		825D4E231EC5447C000C4028 /* Main */ = {
@@ -273,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				823FB8CC1EC9535A00984BCD /* Plist_Discover.plist in Resources */,
 				82D575761EC317E5004AAFB0 /* LaunchScreen.storyboard in Resources */,
 				82D575731EC317E5004AAFB0 /* Assets.xcassets in Resources */,
 				82D575711EC317E5004AAFB0 /* Main.storyboard in Resources */,
@@ -337,6 +362,7 @@
 				82D5756B1EC317E5004AAFB0 /* AppDelegate.m in Sources */,
 				825D4E1F1EC543C5000C4028 /* AppDelegate+Router.m in Sources */,
 				825D4E291EC544BC000C4028 /* XXDiscoverViewController.m in Sources */,
+				823FB8C91EC94F2500984BCD /* XXTableViewCell.m in Sources */,
 				822785AB1EC46F1D003A64E8 /* XXViewController.m in Sources */,
 				825D4E261EC544A9000C4028 /* XXContactsViewController.m in Sources */,
 				82D575681EC317E4004AAFB0 /* main.m in Sources */,

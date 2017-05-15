@@ -17,13 +17,13 @@
 
 // Hook初始化
 
-#define NVConcat_(a, b) a ## b
-#define NVConcat(a, b) NVConcat_(a, b)
+#define XXConcat_(a, b) a ## b
+#define XXConcat(a, b) XXConcat_(a, b)
 
-#define NVConstructor static __attribute__((constructor)) void NVConcat(NVConstructor, __LINE__)()
+#define XXConstructor static __attribute__((constructor)) void XXConcat(XXConstructor, __LINE__)()
 
 // 交换示例方法
-#define NVHookInstanceMethod(classname, ori_sel, new_sel) \
+#define XXHookInstanceMethod(classname, ori_sel, new_sel) \
 \
 { \
 Class class = objc_getClass(#classname); \
@@ -34,7 +34,7 @@ method_exchangeImplementations(ori_method, new_method); \
 \
 
 // 交换类方法
-#define NVHookClassMethod(classname, ori_sel, new_sel) \
+#define XXHookClassMethod(classname, ori_sel, new_sel) \
 \
 { \
 Class class = objc_getClass(#classname); \
@@ -45,10 +45,10 @@ method_exchangeImplementations(ori_method, new_method); \
 \
 
 // .h文件
-#define NV_SingletonH(name) + (instancetype)shared##name;
+#define XX_SingletonH(name) + (instancetype)shared##name;
 
 // .m文件
-#define NV_SingletonM(name) \
+#define XX_SingletonM(name) \
 static id _instance; \
 \
 + (id)allocWithZone:(struct _NSZone *)zone \
