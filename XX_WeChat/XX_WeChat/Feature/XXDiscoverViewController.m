@@ -44,11 +44,15 @@
     if (!cell) {
         cell = [[XXTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     [cell settingData:self.dataArray[indexPath.section][indexPath.row]];
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 0.0000001;
+    return 20.f;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return section == 0 ? 15.f : 0.0000001;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -60,6 +64,8 @@
         _tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.separatorColor = RGBCOLOR(221, 221, 223);
+        
     }
     return _tableView;
 }
