@@ -18,6 +18,7 @@
 		825D4E291EC544BC000C4028 /* XXDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825D4E281EC544BC000C4028 /* XXDiscoverViewController.m */; };
 		825D4E2C1EC544D2000C4028 /* XXMainframeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825D4E2B1EC544D2000C4028 /* XXMainframeViewController.m */; };
 		825D4E2F1EC544DC000C4028 /* XXMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825D4E2E1EC544DC000C4028 /* XXMeViewController.m */; };
+		827308E81EDEC00100905854 /* XX_ActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 827308E71EDEC00100905854 /* XX_ActionSheet.m */; };
 		82D575681EC317E4004AAFB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D575671EC317E4004AAFB0 /* main.m */; };
 		82D5756B1EC317E5004AAFB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D5756A1EC317E5004AAFB0 /* AppDelegate.m */; };
 		82D575711EC317E5004AAFB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D5756F1EC317E5004AAFB0 /* Main.storyboard */; };
@@ -50,6 +51,8 @@
 		825D4E2B1EC544D2000C4028 /* XXMainframeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXMainframeViewController.m; sourceTree = "<group>"; };
 		825D4E2D1EC544DC000C4028 /* XXMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXMeViewController.h; sourceTree = "<group>"; };
 		825D4E2E1EC544DC000C4028 /* XXMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXMeViewController.m; sourceTree = "<group>"; };
+		827308E61EDEC00100905854 /* XX_ActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XX_ActionSheet.h; sourceTree = "<group>"; };
+		827308E71EDEC00100905854 /* XX_ActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XX_ActionSheet.m; sourceTree = "<group>"; };
 		82D575631EC317E4004AAFB0 /* XX_WeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XX_WeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D575671EC317E4004AAFB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		82D575691EC317E5004AAFB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -147,6 +150,8 @@
 				825D4E1B1EC54321000C4028 /* XXTabBarController.m */,
 				823FB8C71EC94F2500984BCD /* XXTableViewCell.h */,
 				823FB8C81EC94F2500984BCD /* XXTableViewCell.m */,
+				827308E61EDEC00100905854 /* XX_ActionSheet.h */,
+				827308E71EDEC00100905854 /* XX_ActionSheet.m */,
 			);
 			name = Root;
 			sourceTree = "<group>";
@@ -371,6 +376,7 @@
 				825D4E221EC543FE000C4028 /* XXRouter.m in Sources */,
 				822785A81EC46E8B003A64E8 /* XXNavigationController.m in Sources */,
 				825D4E2C1EC544D2000C4028 /* XXMainframeViewController.m in Sources */,
+				827308E81EDEC00100905854 /* XX_ActionSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

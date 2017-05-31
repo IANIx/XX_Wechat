@@ -29,4 +29,5 @@
 
 #import "XXRouter.h"
 #import "Header.h"
+#import "XX_ActionSheet.h"
 #endif /* PrefixHeader_pch */
