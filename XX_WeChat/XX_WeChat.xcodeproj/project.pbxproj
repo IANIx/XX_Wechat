@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		822785A81EC46E8B003A64E8 /* XXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 822785A71EC46E8B003A64E8 /* XXNavigationController.m */; };
 		822785AB1EC46F1D003A64E8 /* XXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 822785AA1EC46F1D003A64E8 /* XXViewController.m */; };
+		822F289A1EE690670007DA2E /* XXFriendsCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 822F28991EE690670007DA2E /* XXFriendsCircleViewController.m */; };
 		823FB8C91EC94F2500984BCD /* XXTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 823FB8C81EC94F2500984BCD /* XXTableViewCell.m */; };
 		823FB8CC1EC9535A00984BCD /* Plist_Discover.plist in Resources */ = {isa = PBXBuildFile; fileRef = 823FB8CB1EC9535A00984BCD /* Plist_Discover.plist */; };
 		825D4E1C1EC54321000C4028 /* XXTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825D4E1B1EC54321000C4028 /* XXTabBarController.m */; };
@@ -24,6 +25,11 @@
 		82D575711EC317E5004AAFB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D5756F1EC317E5004AAFB0 /* Main.storyboard */; };
 		82D575731EC317E5004AAFB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82D575721EC317E5004AAFB0 /* Assets.xcassets */; };
 		82D575761EC317E5004AAFB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D575741EC317E5004AAFB0 /* LaunchScreen.storyboard */; };
+		82E25C791EF23BA9003D6374 /* XXLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E25C781EF23BA9003D6374 /* XXLabel.m */; };
+		82E25C831EF268E8003D6374 /* XXCircleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E25C821EF268E8003D6374 /* XXCircleTableViewCell.m */; };
+		82E25C8A1EF26946003D6374 /* XXCircleitem.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E25C891EF26946003D6374 /* XXCircleitem.m */; };
+		82E25C8D1EF2695F003D6374 /* XXCircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E25C8C1EF2695F003D6374 /* XXCircleLayout.m */; };
+		82E25C901EF26B0C003D6374 /* circleData.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 82E25C8F1EF26B0C003D6374 /* circleData.geojson */; };
 		E46E4851567B03AA7D4D2A66 /* libPods-XX_WeChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C22C899F30B0BB8FCA69DE70 /* libPods-XX_WeChat.a */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +40,8 @@
 		822785A71EC46E8B003A64E8 /* XXNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXNavigationController.m; sourceTree = "<group>"; };
 		822785A91EC46F1D003A64E8 /* XXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXViewController.h; sourceTree = "<group>"; };
 		822785AA1EC46F1D003A64E8 /* XXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXViewController.m; sourceTree = "<group>"; };
+		822F28981EE690670007DA2E /* XXFriendsCircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXFriendsCircleViewController.h; sourceTree = "<group>"; };
+		822F28991EE690670007DA2E /* XXFriendsCircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXFriendsCircleViewController.m; sourceTree = "<group>"; };
 		823FB8C71EC94F2500984BCD /* XXTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXTableViewCell.h; sourceTree = "<group>"; };
 		823FB8C81EC94F2500984BCD /* XXTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXTableViewCell.m; sourceTree = "<group>"; };
 		823FB8CB1EC9535A00984BCD /* Plist_Discover.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Plist_Discover.plist; sourceTree = "<group>"; };
@@ -61,6 +69,15 @@
 		82D575721EC317E5004AAFB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82D575751EC317E5004AAFB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82D575771EC317E5004AAFB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82E25C771EF23BA9003D6374 /* XXLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXLabel.h; sourceTree = "<group>"; };
+		82E25C781EF23BA9003D6374 /* XXLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXLabel.m; sourceTree = "<group>"; };
+		82E25C811EF268E8003D6374 /* XXCircleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXCircleTableViewCell.h; sourceTree = "<group>"; };
+		82E25C821EF268E8003D6374 /* XXCircleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXCircleTableViewCell.m; sourceTree = "<group>"; };
+		82E25C881EF26946003D6374 /* XXCircleitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXCircleitem.h; sourceTree = "<group>"; };
+		82E25C891EF26946003D6374 /* XXCircleitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXCircleitem.m; sourceTree = "<group>"; };
+		82E25C8B1EF2695F003D6374 /* XXCircleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXCircleLayout.h; sourceTree = "<group>"; };
+		82E25C8C1EF2695F003D6374 /* XXCircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXCircleLayout.m; sourceTree = "<group>"; };
+		82E25C8F1EF26B0C003D6374 /* circleData.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = circleData.geojson; sourceTree = "<group>"; };
 		C22C899F30B0BB8FCA69DE70 /* libPods-XX_WeChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XX_WeChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C762B8D94B92670B15C56ED8 /* Pods-XX_WeChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XX_WeChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XX_WeChat/Pods-XX_WeChat.debug.xcconfig"; sourceTree = "<group>"; };
 		EE41E3481B110FE6F8BF677C /* Pods-XX_WeChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XX_WeChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-XX_WeChat/Pods-XX_WeChat.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +169,8 @@
 				823FB8C81EC94F2500984BCD /* XXTableViewCell.m */,
 				827308E61EDEC00100905854 /* XX_ActionSheet.h */,
 				827308E71EDEC00100905854 /* XX_ActionSheet.m */,
+				82E25C771EF23BA9003D6374 /* XXLabel.h */,
+				82E25C781EF23BA9003D6374 /* XXLabel.m */,
 			);
 			name = Root;
 			sourceTree = "<group>";
@@ -159,6 +178,11 @@
 		823FB8C61EC94EA000984BCD /* discover(发现) */ = {
 			isa = PBXGroup;
 			children = (
+				82E25C8E1EF26AE3003D6374 /* json */,
+				82E25C841EF26900003D6374 /* Model */,
+				82E25C801EF24175003D6374 /* View */,
+				822F28981EE690670007DA2E /* XXFriendsCircleViewController.h */,
+				822F28991EE690670007DA2E /* XXFriendsCircleViewController.m */,
 			);
 			name = "discover(发现)";
 			sourceTree = "<group>";
@@ -232,6 +256,34 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		82E25C801EF24175003D6374 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				82E25C811EF268E8003D6374 /* XXCircleTableViewCell.h */,
+				82E25C821EF268E8003D6374 /* XXCircleTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		82E25C841EF26900003D6374 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82E25C881EF26946003D6374 /* XXCircleitem.h */,
+				82E25C891EF26946003D6374 /* XXCircleitem.m */,
+				82E25C8B1EF2695F003D6374 /* XXCircleLayout.h */,
+				82E25C8C1EF2695F003D6374 /* XXCircleLayout.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		82E25C8E1EF26AE3003D6374 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				82E25C8F1EF26B0C003D6374 /* circleData.geojson */,
+			);
+			name = json;
+			sourceTree = "<group>";
+		};
 		A62C46FCEAE3B6AD5DE9B18E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82E25C901EF26B0C003D6374 /* circleData.geojson in Resources */,
 				823FB8CC1EC9535A00984BCD /* Plist_Discover.plist in Resources */,
 				82D575761EC317E5004AAFB0 /* LaunchScreen.storyboard in Resources */,
 				82D575731EC317E5004AAFB0 /* Assets.xcassets in Resources */,
@@ -365,15 +418,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				82D5756B1EC317E5004AAFB0 /* AppDelegate.m in Sources */,
+				82E25C791EF23BA9003D6374 /* XXLabel.m in Sources */,
 				825D4E1F1EC543C5000C4028 /* AppDelegate+Router.m in Sources */,
 				825D4E291EC544BC000C4028 /* XXDiscoverViewController.m in Sources */,
 				823FB8C91EC94F2500984BCD /* XXTableViewCell.m in Sources */,
+				82E25C8D1EF2695F003D6374 /* XXCircleLayout.m in Sources */,
+				822F289A1EE690670007DA2E /* XXFriendsCircleViewController.m in Sources */,
 				822785AB1EC46F1D003A64E8 /* XXViewController.m in Sources */,
+				82E25C831EF268E8003D6374 /* XXCircleTableViewCell.m in Sources */,
 				825D4E261EC544A9000C4028 /* XXContactsViewController.m in Sources */,
 				82D575681EC317E4004AAFB0 /* main.m in Sources */,
 				825D4E2F1EC544DC000C4028 /* XXMeViewController.m in Sources */,
 				825D4E1C1EC54321000C4028 /* XXTabBarController.m in Sources */,
 				825D4E221EC543FE000C4028 /* XXRouter.m in Sources */,
+				82E25C8A1EF26946003D6374 /* XXCircleitem.m in Sources */,
 				822785A81EC46E8B003A64E8 /* XXNavigationController.m in Sources */,
 				825D4E2C1EC544D2000C4028 /* XXMainframeViewController.m in Sources */,
 				827308E81EDEC00100905854 /* XX_ActionSheet.m in Sources */,

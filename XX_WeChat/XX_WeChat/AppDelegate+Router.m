@@ -11,6 +11,7 @@
 #import "XXMeViewController.h"
 #import "XXDiscoverViewController.h"
 #import "XXMainframeViewController.h"
+#import "XXFriendsCircleViewController.h"
 
 @implementation AppDelegate (Router)
 
@@ -19,5 +20,7 @@
     [XXRouter map:@"me" toControllerClass:[XXMeViewController class]];
     [XXRouter map:@"discover" toControllerClass:[XXDiscoverViewController class]];
     [XXRouter map:@"mainframe" toControllerClass:[XXMainframeViewController class]];
+    
+    [XXRouter map:@"discover/friendCircle" toControllerClass:[XXFriendsCircleViewController class]];
 }
 @end

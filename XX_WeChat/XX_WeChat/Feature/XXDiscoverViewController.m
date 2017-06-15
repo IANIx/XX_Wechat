@@ -44,11 +44,12 @@
     if (!cell) {
         cell = [[XXTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     [cell settingData:self.dataArray[indexPath.section][indexPath.row]];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIViewController *viewController = [XXRouter matchController:self.dataArray[indexPath.section][indexPath.row][@"router"]];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 20.f;

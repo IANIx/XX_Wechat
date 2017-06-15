@@ -16,6 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    XXLabel *label = [[XXLabel alloc]initWithFrame:CGRectMake(100, 100, 200, 100)];
+    label.text = @"jakfjhafuiyeiuoihjajafjayufuyajfkjakfhuahfi";
+    [self.view addSubview:label];
+    
+    
+    UITextView *textView = [[UITextView alloc]initWithFrame:CGRectMake(100, 350, 200, 100)];
+    textView.backgroundColor = [UIColor orangeColor];
+    [self.view addSubview:textView];
     // Do any additional setup after loading the view.
 }
 
