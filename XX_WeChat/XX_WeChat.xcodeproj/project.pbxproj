@@ -20,6 +20,7 @@
 		825D4E2C1EC544D2000C4028 /* XXMainframeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825D4E2B1EC544D2000C4028 /* XXMainframeViewController.m */; };
 		825D4E2F1EC544DC000C4028 /* XXMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825D4E2E1EC544DC000C4028 /* XXMeViewController.m */; };
 		827308E81EDEC00100905854 /* XX_ActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 827308E71EDEC00100905854 /* XX_ActionSheet.m */; };
+		8275BEC51F09E35300AB4FE5 /* UILabel+XXRichTextModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8275BEC41F09E35300AB4FE5 /* UILabel+XXRichTextModel.m */; };
 		82D575681EC317E4004AAFB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D575671EC317E4004AAFB0 /* main.m */; };
 		82D5756B1EC317E5004AAFB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D5756A1EC317E5004AAFB0 /* AppDelegate.m */; };
 		82D575711EC317E5004AAFB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D5756F1EC317E5004AAFB0 /* Main.storyboard */; };
@@ -61,6 +62,8 @@
 		825D4E2E1EC544DC000C4028 /* XXMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXMeViewController.m; sourceTree = "<group>"; };
 		827308E61EDEC00100905854 /* XX_ActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XX_ActionSheet.h; sourceTree = "<group>"; };
 		827308E71EDEC00100905854 /* XX_ActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XX_ActionSheet.m; sourceTree = "<group>"; };
+		8275BEC31F09E35300AB4FE5 /* UILabel+XXRichTextModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+XXRichTextModel.h"; sourceTree = "<group>"; };
+		8275BEC41F09E35300AB4FE5 /* UILabel+XXRichTextModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+XXRichTextModel.m"; sourceTree = "<group>"; };
 		82D575631EC317E4004AAFB0 /* XX_WeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XX_WeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D575671EC317E4004AAFB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		82D575691EC317E5004AAFB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 		822785A21EC45ED4003A64E8 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				8275BEC31F09E35300AB4FE5 /* UILabel+XXRichTextModel.h */,
+				8275BEC41F09E35300AB4FE5 /* UILabel+XXRichTextModel.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -434,6 +439,7 @@
 				82E25C8A1EF26946003D6374 /* XXCircleitem.m in Sources */,
 				822785A81EC46E8B003A64E8 /* XXNavigationController.m in Sources */,
 				825D4E2C1EC544D2000C4028 /* XXMainframeViewController.m in Sources */,
+				8275BEC51F09E35300AB4FE5 /* UILabel+XXRichTextModel.m in Sources */,
 				827308E81EDEC00100905854 /* XX_ActionSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,6 +24,7 @@
 
 #import <HHRouter.h>
 #import <Masonry.h>
+#import <YYModel/YYModel.h>
 #import <UIImageView+WebCache.h>
 
 

@@ -8,10 +8,6 @@
 
 #import "XXCircleTableViewCell.h"
 
-#define top 8
-#define left 5
-#define right 5
-#define bottom 8
 
 
 
@@ -76,13 +72,32 @@
 
 @end
 
+@implementation XXStatusView
+
+
+@end
 @implementation XXCircleTableViewCell
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    _statusView = [XXStatusView new];
+    _statusView.cell = self;
+    _statusView.titleView.cell = self;
+    _statusView.linkView.cell = self;
+    _statusView.contentView.cell = self;
+    _statusView.toolView.cell = self;
+    _statusView.commentView.cell = self;
+    [self.contentView addSubview:_statusView];
+    return self;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
 }
-
+- (void)setLayout:(XXCircleLayout *)layout {
+    _statusView.layout = layout;
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

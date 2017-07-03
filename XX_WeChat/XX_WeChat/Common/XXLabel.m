@@ -28,7 +28,6 @@
 #pragma mark - handle
 -(void)handleTap:(UIGestureRecognizer*) recognizer
 {
-    self.backgroundColor = [UIColor grayColor];
     [self becomeFirstResponder];
     UIMenuItem *copyLink = [[UIMenuItem alloc] initWithTitle:@"复制"
                                                       action:@selector(copyText:)];

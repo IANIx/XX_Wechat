@@ -7,7 +7,9 @@
 //
 
 #import "XXFriendsCircleViewController.h"
-
+#import "XXCircleitem.h"
+#import "XXCircleLayout.h"
+#import "XXCircleTableViewCell.h"
 @interface XXFriendsCircleViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView       *tableView;
@@ -25,10 +27,23 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupText];
     [self loadSubViews];
     // Do any additional setup after loading the view.
 }
-
+- (void)setupText {
+    NSString *strPath = [[NSBundle mainBundle] pathForResource:@"circleData" ofType:@"geojson"];
+    NSString *parseJason = [[NSString alloc] initWithContentsOfFile:strPath encoding:NSUTF8StringEncoding error:nil];
+    NSArray *array = [NSJSONSerialization JSONObjectWithData:[parseJason dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:nil];
+    NSLog(@"%@",array);
+    for (int i = 0; i < array.count; i++) {
+        XXCircleitem *item = [XXCircleitem yy_modelWithDictionary:array[i]];
+        XXCircleLayout *layout = [[XXCircleLayout alloc]initWithItem:item];
+        [_layouts addObject:layout];
+    }
+    
+    NSLog(@"%@",array);
+}
 - (void)loadSubViews {
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -44,15 +59,20 @@
 
 #pragma mark - tableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return _layouts.count;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return UITableViewAutomaticDimension;
-}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CELL"];
+    XXCircleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELL"];
+    if (!cell) {
+        cell = [[XXCircleTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CELL"];
+        //cell.delegate = self;
+    }
+    [cell setLayout:_layouts[indexPath.row]];
     return cell;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return ((XXCircleLayout *)_layouts[indexPath.row]).height;
 }
 
 //- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {

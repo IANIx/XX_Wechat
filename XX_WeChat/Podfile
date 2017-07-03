@@ -10,6 +10,7 @@ target 'XX_WeChat' do
   #use_frameworks!
   pod 'HHRouter', '~> 0.1.9'
   pod 'MJRefresh'
+  pod 'YYModel'
   pod 'SDWebImage'
   pod 'Masonry'
 end

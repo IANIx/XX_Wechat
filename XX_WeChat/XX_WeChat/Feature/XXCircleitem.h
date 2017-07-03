@@ -8,6 +8,29 @@
 
 #import <Foundation/Foundation.h>
 
+@interface XXCircleUser : NSObject
+
+@property (nonatomic, strong) NSString  *nickname;
+@property (nonatomic, strong) NSString     *icon_url;
+
+@end
+
+@interface XXCircleComment : NSObject
+
+@property (nonatomic, strong) NSString *Commentator;
+@property (nonatomic, strong) NSString *Reply;
+@property (nonatomic, strong) NSString *content;
+
+
+@end
+
 @interface XXCircleitem : NSObject
+
+@property (nonatomic, strong) XXCircleUser *user; ///< 发布者
+@property (nonatomic, strong) NSString *text; ///<正文
+@property (nonatomic, strong) NSArray<NSURL *>  *pics; ///< 图片
+@property (nonatomic, strong) NSArray<XXCircleUser *> *likes;///< 点赞
+@property (nonatomic, strong) NSArray<XXCircleComment *> *comments; ///< 评论内容
+
 
 @end

@@ -1,21 +1,46 @@
+
+[
 {
-    "user" : {
+ "user" : {
         "icon_url" : "http://ww4.sinaimg.cn/crop.0.0.0.0/69917555jw1eb4t4qjcb1j20hs0hsabh.jpg",
         "nickname" : "avbnm"
-    }
-    "create_time" : "1分钟前",
-    "text" : "#为周杰伦正名# 看不下去，什么叫我伦给国足添堵？！演唱会去就审批过的，票也早就开售了，何来我伦干扰国足比赛了？国足赛场八月才临时改的场地，甩锅给我伦？这锅不接 抽奖，不用关注，转发就行，9.10号抽一个人送三盒日本带回来的 白色恋人@转发抽奖平台 ",
-    "pic" : ["","","",""],
-    "likes" : [
-               {"user_name": "123456"}
-               ],
-    "comments": [
-        
-    ],
-    "link" : {
+        },
+ "create_time" : "1分钟前",
+ "text" : "#为周杰伦正名# 看不下去，什么叫我伦给国足添堵？！演唱会去就审批过的，票也早就开售了，何来我伦干扰国足比赛了？国足赛场八月才临时改的场地，甩锅给我伦？这锅不接 抽奖，不用关注，转发就行，9.10号抽一个人送三盒日本带回来的 白色恋人@转发抽奖平台 ",
+ "pics" : ["","","",""],
+ "likes" : [
+            {"nickname": "123456",
+            "icon_url":"1213"},
+            {"nickname": "张三",
+            "icon_url":"1213"}
+            ],
+ "comments": [
+              {
+              "Commentator":"张三",
+              "Reply":"",
+              "content":"呵呵哒"
+              },
+              {
+              "Commentator":"张三",
+              "Reply":"",
+              "content":"呵呵哒"
+              },
+              {
+              "Commentator":"张三",
+              "Reply":"",
+              "content":"呵呵哒"
+              },
+              {
+              "Commentator":"张三",
+              "Reply":"",
+              "content":"呵呵哒"
+              }
+              ],
+ "link" : {
         "image_url" : "",
         "title" : "",
         "url" : ""
-    }
-    
+ }
+
 }
+]

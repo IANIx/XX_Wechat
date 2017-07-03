@@ -8,6 +8,18 @@
 
 #import "XXCircleitem.h"
 
-@implementation XXCircleitem
+@implementation XXCircleComment
 
+@end
+@implementation XXCircleUser
+
+
+@end
+
+@implementation XXCircleitem
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"comments" : [XXCircleComment class],
+             @"likes" : [XXCircleUser class],
+             @"user":[XXCircleUser class]};
+}
 @end

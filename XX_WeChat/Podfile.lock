@@ -5,19 +5,22 @@ PODS:
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - HHRouter (~> 0.1.9)
   - Masonry
   - MJRefresh
   - SDWebImage
+  - YYModel
 
 SPEC CHECKSUMS:
   HHRouter: c096524e95a07a1970e6e23a19ee5a9592dc326d
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 1f82a9c2289ff319219c9b332f9f9e8b0f8bc987
+PODFILE CHECKSUM: 8808e9ce0c309206c28069c3850261b4db219c90
 
 COCOAPODS: 1.2.1
