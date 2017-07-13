@@ -70,6 +70,7 @@
     goodTextLbl.backgroundColor = [UIColor orangeColor];
     goodTextLbl.numberOfLines = 0;//设置UILable自适应
     goodTextLbl.attributedText = newGoodString;
+    //goodTextLbl.text = goodTotalString;
     [self.view addSubview:goodTextLbl];
     [goodTextLbl sizeToFit];
     

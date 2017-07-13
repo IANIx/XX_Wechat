@@ -11,7 +11,7 @@
 @interface XXCircleUser : NSObject
 
 @property (nonatomic, strong) NSString  *nickname;
-@property (nonatomic, strong) NSString     *icon_url;
+@property (nonatomic, strong) NSString  *icon_url;
 
 @end
 

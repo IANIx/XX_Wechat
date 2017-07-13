@@ -26,34 +26,43 @@
     _toolbarHeight = CellToolBarHeight;
     _interactionHeight = 0;
     
-    [self layoutTitle];
-    [self layoutText];
-    [self layoutPic];
+    [self layoutContent];
     [self layoutInterction];
     
     _height += _marginTop;
-    _height += _profileHeight;
-    _height += _textHeight;
-    _height += _picHeight;
+    _height += _contentHeight;
     _height += _toolbarHeight;
     _height += _interactionHeight;
     _height += _marginBottom;
 }
+- (void)layoutContent {
+    [self layoutTitle];
+    [self layoutText];
+    [self layoutPic];
+    
+    _contentHeight = 0;
+    _contentHeight += _profileHeight;
+    _contentHeight += kCellContentPadding;
+    _contentHeight += _textHeight;
+    _contentHeight += kCellContentPadding;
+    _contentHeight += _picHeight;
 
+}
 - (void)layoutTitle {
     CGSize tempSize = [_item.user.nickname boundingRectWithSize:CGSizeMake(MAXFLOAT, 20000.f)
                                              options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin
-                                                     attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:CellTextSize]}
+                                                     attributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:CellTextSize]}
                                                         context:nil].size;
     _profileHeight = tempSize.height;
 
 }
 - (void)layoutText {
-    CGSize tempSize = [_item.text boundingRectWithSize:CGSizeMake(MAXFLOAT, 20000.f)
+    CGSize tempSize = [_item.text boundingRectWithSize:CGSizeMake(kWBCellContentWidth - 40 - kWBCellPadding, 20000.f)
                                                         options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin
                                                      attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:CellTextSize]}
                                                         context:nil].size;
-    _textHeight = tempSize.height;
+    _textHeight = ceilf(tempSize.height);
+    
 
 }
 - (void)layoutPic {

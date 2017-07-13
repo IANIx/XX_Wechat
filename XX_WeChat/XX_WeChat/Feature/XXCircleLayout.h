@@ -11,12 +11,13 @@
 
 #define CellTopMargin 8 //cell 顶部留白
 #define CellBottomMargin 8
-#define CellToolBarHeight 8
+#define CellToolBarHeight 15.f
 
 #define CellTextSize 15.f
 #define kWBCellPadding 12       // cell 内边距
+#define kCellContentPadding 8.f       
 
-#define kWBCellContentWidth (MainScreenWidth - 2 * kWBCellPadding) // cell 内容宽度
+#define kWBCellContentWidth (MainScreenWidth - (2 * kWBCellPadding)) // cell 内容宽度
 #define kWBCellPaddingPic 4     // cell 多张图片中间留白
 
 @interface XXCircleLayout : NSObject
@@ -29,7 +30,7 @@
 
 
 // 个人资料
-@property (nonatomic, assign) CGFloat profileHeight; //个人资料高度(包括留白)
+@property (nonatomic, assign) CGFloat profileHeight; //个人昵称
 
 // 文本
 @property (nonatomic, assign) CGFloat textHeight; //文本高度(包括下方留白)
@@ -38,6 +39,7 @@
 @property (nonatomic, assign) CGFloat picHeight; //图片高度，0为没图片
 @property (nonatomic, assign) CGSize picSize;
 
+@property (nonatomic, assign) CGFloat contentHeight;
 // Tag
 @property (nonatomic, assign) CGFloat tagHeight; //Tip高度，0为没tip
 

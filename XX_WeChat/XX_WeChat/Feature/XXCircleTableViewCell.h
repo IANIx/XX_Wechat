@@ -24,12 +24,20 @@
 
 @end
 
+@interface XXCircleImgView : UIView
+
+@property (nonatomic, strong) NSArray<NSURL *>  *pics;
+
+@end
+
 @interface  XXCircleContentView: UIView
+@property (nonatomic, strong) XXCircleLayout *layout;
 
 @property (nonatomic, strong) UILabel *nickNameLabel;       //姓名
+@property (nonatomic, strong) XXCircleImgView *imgView;     //显示图片
 @property (nonatomic, strong) UILabel *contentLabel;        //内容
 @property (nonatomic, strong) XXCircleLinkView *linkView;   //分享内容
-@property (nonatomic,weak) XXCircleTableViewCell *cell;
+@property (nonatomic, weak  ) XXCircleTableViewCell *cell;
 
 @end
 
@@ -42,14 +50,25 @@
 
 @end
 
-@interface  XXCircleCommentView: UIView
+@interface  XXCommentTableViewCell : UITableViewCell
+
+@property (nonatomic, strong) XXLabel *label;
+
+@end
+
+@interface  XXCircleCommentView: UIView <UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic, strong) UITableView *tabelView;
 @property (nonatomic,weak) XXCircleTableViewCell *cell;
+
+@property (nonatomic, copy) NSArray *likes;
+@property (nonatomic, copy) NSArray *comments;
+
 @end
 
 @interface XXStatusView : UIView
 
 @property (nonatomic, strong) XXCircleTitleView *titleView;
-@property (nonatomic, strong) XXCircleLinkView *linkView;
 @property (nonatomic, strong) XXCircleContentView *contentView;
 @property (nonatomic, strong) XXCircleToolsView *toolView;
 @property (nonatomic, strong) XXCircleCommentView *commentView;
