@@ -11,7 +11,7 @@
 
 #define CellTopMargin 8 //cell 顶部留白
 #define CellBottomMargin 8
-#define CellToolBarHeight 15.f
+#define CellToolBarHeight 20.f
 
 #define CellTextSize 15.f
 #define kWBCellPadding 12       // cell 内边距

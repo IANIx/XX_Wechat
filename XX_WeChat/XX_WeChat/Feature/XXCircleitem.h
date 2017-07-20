@@ -28,6 +28,7 @@
 
 @property (nonatomic, strong) XXCircleUser *user; ///< 发布者
 @property (nonatomic, strong) NSString *text; ///<正文
+@property (nonatomic, strong) NSString *create_time; ///<创建时间 最好是个时间戳
 @property (nonatomic, strong) NSArray<NSURL *>  *pics; ///< 图片
 @property (nonatomic, strong) NSArray<XXCircleUser *> *likes;///< 点赞
 @property (nonatomic, strong) NSArray<XXCircleComment *> *comments; ///< 评论内容

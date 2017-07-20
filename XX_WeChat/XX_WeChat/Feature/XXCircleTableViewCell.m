@@ -98,11 +98,36 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        [self addSubview:self.timeLabel];
+        [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.left.equalTo(self);
+        }];
         
+        [self addSubview:self.commentButton];
+        [self.commentButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(self);
+            make.top.equalTo(self);
+            make.bottom.equalTo(self);
+            make.width.equalTo(self.commentButton.mas_height);
+        }];
     }
     return self;
 }
-
+- (UILabel *)timeLabel {
+    if (!_timeLabel) {
+        _timeLabel = [[UILabel alloc]init];
+        _timeLabel.font = [UIFont systemFontOfSize:9.f];
+        _timeLabel.textColor = [UIColor grayColor];
+    }
+    return _timeLabel;
+}
+- (UIButton *)commentButton {
+    if (!_commentButton) {
+        _commentButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_commentButton setBackgroundImage:[UIImage imageNamed:@"AlbumOperateMore"] forState:UIControlStateNormal];
+    }
+    return _commentButton;
+}
 @end
 
 @implementation XXCommentTableViewCell
@@ -184,15 +209,17 @@
         make.right.equalTo(self).with.offset(-kWBCellPadding);
     }];
 
-    
     [self addSubview:self.toolView];
     [self.toolView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.right.equalTo(self.contentView);
+        make.left.equalTo(self.contentView);
+        make.top.equalTo(self.contentView.mas_bottom);
+        make.right.equalTo(self).with.offset(-kCellContentPadding);
     }];
     
     [self addSubview:self.commentView];
     [self.commentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.right.equalTo(self.toolView);
+        make.left.right.equalTo(self.toolView);
+        make.top.equalTo(self.toolView.mas_bottom);
     }];
     return self;
 }
@@ -206,6 +233,7 @@
         make.height.mas_equalTo(layout.contentHeight);
     }];
     
+    self.toolView.timeLabel.text = layout.item.create_time;
     [self.toolView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(layout.toolbarHeight);
     }];
@@ -233,12 +261,27 @@
     }
     return _contentView;
 }
+- (XXCircleToolsView *)toolView {
+    if (!_toolView) {
+        _toolView = [[XXCircleToolsView alloc]init];
+        _toolView.backgroundColor = [UIColor cyanColor];
+    }
+    return _toolView;
+}
+- (XXCircleCommentView *)commentView {
+    if (!_commentView) {
+        _commentView = [[XXCircleCommentView alloc]init];
+        _commentView.backgroundColor = [UIColor purpleColor];
+    }
+    return _commentView;
+}
 @end
 
 @implementation XXCircleTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     _statusView = [XXStatusView new];
     _statusView.cell = self;
     _statusView.titleView.cell = self;

@@ -99,7 +99,7 @@
 }
 - (void)layoutInterction {
     CGFloat likesHeight = 0;
-    if (_item.likes > 0) {
+    if (_item.likes > 0 && _item.likes != nil) {
         //♥
         __block NSString *likes = @"♡";
         [_item.likes enumerateObjectsUsingBlock:^(XXCircleUser * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
